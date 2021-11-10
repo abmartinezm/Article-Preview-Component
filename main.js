@@ -1,7 +1,7 @@
 const btn=document.querySelector('.button');
 const socialM=document.querySelector('.social-media');
 const trian=document.querySelector('.triangule');
-const icon=document.querySelector('.text');
+const icon=document.querySelectorAll('.fab');
 const foot=document.querySelector('.footer')
 const spn=document.querySelector('.span')
 
@@ -23,7 +23,9 @@ btn.addEventListener('click', (e) => {
 
     spn.classList.toggle('activa')
 
-    icon.classList.toggle('activo');
+    icon.forEach(icon => {
+        icon.classList.toggle('activo');
+    });
 
     trian.classList.toggle('activo');
 
